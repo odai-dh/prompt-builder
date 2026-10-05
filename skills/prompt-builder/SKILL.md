@@ -68,6 +68,10 @@ Use the tier rules in `references/models-and-effort.md` and map tiers to current
 
 Always give a cheaper fallback when one would reasonably work. Only recommend high effort when you can say what the extra reasoning buys.
 
+Quick tiers if the reference can't be read (verify names against the docs): Haiku 4.5 for extraction and simple rewrites; Sonnet 5.5 as the default for writing, coding and analysis; Opus 5.5 for long-running agentic work or hard reasoning. Effort: low for drafts and brainstorming, medium for regular work, high where verification matters.
+
+Don't name a specific effort control for the Claude app or Cowork unless the reference confirms it. Say the user can set it where their app exposes it, and otherwise recommend the model.
+
 ## Output format
 
 Use this structure:
@@ -85,7 +89,7 @@ Use this structure:
 
 **Assumptions** — only if you skipped questions or inferred something important.
 
-For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead.
+For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems / next step). Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
 
 ## Quality check before you answer
 

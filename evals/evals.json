@@ -4,7 +4,9 @@
     {
       "id": 1,
       "prompt": "make this better: write me a blog post about AI",
-      "expected_output": "Asks 2-3 plain-language questions (audience, angle, length), builds a structured prompt, recommends Sonnet at low/medium effort."
+      "expected_output": "Asks 2-3 plain-language questions (audience, angle, length), builds a structured prompt, recommends Sonnet at low/medium effort.",
+      "follow_up": "2, 2, b, a",
+      "follow_up_expected_output": "After the answers: builds a structured prompt and recommends Sonnet at low/medium effort."
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
     {
       "id": 5,
       "prompt": "kan du göra den här prompten bättre: sammanfatta mötet",
-      "expected_output": "Interviews in Swedish, asks what the summary is for and the format, recommends Haiku or Sonnet at low effort."
+      "expected_output": "Interviews in Swedish, asks what the summary is for and the format, recommends Haiku or Sonnet at low effort.",
+      "follow_up": "1a, 2b, 3a",
+      "follow_up_expected_output": "After the answers: builds the prompt in Swedish and recommends Haiku or Sonnet at low effort."
     },
     {
       "id": 6,
@@ -34,12 +38,25 @@
     {
       "id": 7,
       "prompt": "improve this for cowork: clean up my downloads folder and update the project notes",
-      "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep and whether to draft first, builds a bounded prompt."
+      "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep and whether to draft first, builds a bounded prompt.",
+      "follow_up": "3, 1, 1, 1",
+      "follow_up_expected_output": "After the answers: builds a bounded prompt (named folder, nothing deleted, draft before saving the notes)."
     },
     {
       "id": 8,
       "prompt": "claude keeps giving me really generic answers when I ask for marketing ideas, why?",
-      "expected_output": "Uses the symptom table: explains missing specifics/audience, asks 1-2 questions, offers a rebuilt prompt."
+      "expected_output": "Uses the symptom table: explains missing specifics/audience, asks at most 2 questions, offers a rebuilt prompt."
+    },
+    {
+      "id": 9,
+      "prompt": "what's the difference between a list and a tuple in Python?",
+      "expected_output": "Near-miss: the skill should NOT trigger. Plain answer to the question, no interview, no model/effort recommendation."
+    },
+    {
+      "id": 10,
+      "prompt": "Write a haiku about autumn rain.",
+      "expected_output": "Near-miss: the skill should NOT trigger. Just the haiku."
     }
-  ]
+  ],
+  "_note": "follow_up (optional) is the user's reply to the interview; run it as a second turn and grade follow_up_expected_output. Skill-creator ignores unknown fields."
 }

@@ -12,10 +12,10 @@
 - Ship when the cases that matter clearly beat the no-skill baseline and known gaps are written down below.
 
 ## Known gaps
-- How effort is set in the Claude app / Cowork: verify before publishing.
+- How effort is set in the Claude app / Cowork: still unverified. SKILL.md tells the skill not to name a control until this is confirmed; confirm, then update models-and-effort.md and drop that line.
 - Fable 5.1 pricing and default effort: fill from docs.
 - Haiku 5.5 is announced; update models-and-effort.md when it ships.
-- examples.md is empty; fill from good eval runs.
+- examples.md is seeded from iteration-1 eval cases (written by hand, not captured from runs); replace with real good runs.
 
 ## Keeping models current
 Re-check platform.claude.com/docs/en/models on every new model release and bump the date in models-and-effort.md.
