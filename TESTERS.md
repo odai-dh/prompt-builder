@@ -5,11 +5,15 @@ Thanks for helping test. This takes about 15 minutes.
 ## Install (Claude Code)
 
 ```
-git clone https://github.com/odai-dh/prompt-builder.git
-claude --plugin-dir ./prompt-builder
+claude plugin marketplace add odai-dh/prompt-builder#main
+claude plugin install prompt-builder@odai-prompt-builder
 ```
 
-`--plugin-dir` loads the plugin for that session only. Start Claude Code this way each time you want to use it.
+Inside a Claude Code session, use `/plugin marketplace add odai-dh/prompt-builder#main` and `/plugin install prompt-builder@odai-prompt-builder` instead. Then start a new session. To check it installed, run `claude plugin list`; you should see `prompt-builder@odai-prompt-builder` at version 0.2.0.
+
+To pick up fixes during the test: `claude plugin update prompt-builder@odai-prompt-builder`.
+
+Developers can instead load a local checkout for one session: `git clone --branch main https://github.com/odai-dh/prompt-builder.git`, then `claude --plugin-dir ./prompt-builder`.
 
 ## What to do
 

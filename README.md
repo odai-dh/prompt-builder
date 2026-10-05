@@ -15,10 +15,25 @@ Built for the Claude app, Cowork and Claude Code.
 ## Install (Claude Code)
 
 ```
-git clone https://github.com/odai-dh/prompt-builder.git
+claude plugin marketplace add odai-dh/prompt-builder#main
+claude plugin install prompt-builder@odai-prompt-builder
+```
+
+Inside a Claude Code session the same two steps are `/plugin marketplace add odai-dh/prompt-builder#main` and `/plugin install prompt-builder@odai-prompt-builder`.
+
+Then start a new session and ask Claude to improve a prompt, or run `/prompt-builder:prompt-builder`. To check it's installed, run `claude plugin list`.
+
+Update with `claude plugin update prompt-builder@odai-prompt-builder`. Remove with `claude plugin uninstall prompt-builder@odai-prompt-builder`.
+
+### For developers
+
+To load the plugin from a local checkout instead (this session only, no install):
+
+```
+git clone --branch main https://github.com/odai-dh/prompt-builder.git
 claude --plugin-dir ./prompt-builder
 ```
 
-`--plugin-dir` loads the plugin for that session. Then ask Claude to improve a prompt, or run `/prompt-builder:prompt-builder`. To check it loaded, run `claude plugin validate ./prompt-builder`. See [TESTERS.md](TESTERS.md) if you're helping test.
+See [TESTERS.md](TESTERS.md) if you're helping test.
 
 Status: v0.2.0. Tested in Claude Code; in testing for the Claude app and Cowork.
