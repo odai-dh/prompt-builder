@@ -32,6 +32,8 @@ If the task lets Claude change, delete, send or publish things (Cowork, Claude C
 
 Everything you can infer, infer. Questions are only for gaps that would change the result.
 
+**Triage first.** If the prompt already covers goal, constraints and output format, or the user says "skip questions", it's strong. Say so, then change at most 3 things, keep the user's wording and scope, and give a one-line "what I changed". Don't add steps, tools or checks the user didn't ask for; adding scope is a rewrite, not an improvement. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
+
 ## Step 2: Read the user's level
 
 Judge it from their message, never by asking. Signals include vocabulary, technical terms, prompt length, and whether they already specify format or constraints.
@@ -52,6 +54,7 @@ Follow `references/interview-playbook.md`. The core rules:
 - If cost versus quality is unclear and it affects the model choice, include it as a question.
 - Never guess on irreversible actions. If an agentic task could delete, overwrite or send something and the bounds aren't stated, ask.
 - Ask in the user's language.
+- When the user describes a symptom rather than a prompt, explain the cause first and ask at most 2 questions.
 
 ## Step 4: Build the prompt
 
