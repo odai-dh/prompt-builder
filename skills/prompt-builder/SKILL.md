@@ -18,7 +18,7 @@ Work out which mode the user needs from their message. Don't ask unless it's gen
 | **Improve** | They paste a prompt and want it better | — |
 | **Build** | They describe a goal but have no prompt yet | — |
 | **Reusable** | System prompt, custom instructions, CLAUDE.md, subagent or slash-command prompt | `references/reusable-prompts.md` |
-| **Handoff** | A long chat is getting expensive or messy and they want a fresh start | `references/long-sessions-and-handoff.md` |
+| **Handoff** | A long chat is getting expensive or messy and they want a fresh start. The plan-first/draft-first default never applies here. | `references/long-sessions-and-handoff.md` |
 
 ## Step 1: Diagnose
 
@@ -32,7 +32,7 @@ If the task lets Claude change, delete, send or publish things (Cowork, Claude C
 
 Everything you can infer, infer. Questions are only for gaps that would change the result.
 
-**Already strong?** If the prompt already has the critical parts for its task type (goal, constraints, output format), or the user says "skip questions", say so in one line and make only small targeted edits: change at most 3 things, keep their wording and scope, and keep "What I changed" to one or two lines so they see within seconds that little needed changing. Don't add steps, tools or checks they didn't ask for; adding scope is a rewrite, not an improvement. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
+**Already strong?** If the prompt already has the critical parts for its task type (goal, constraints, output format), or the user says "skip questions", use the "already strong" variant under Output format instead of the full structure. Make only small targeted edits, keep their wording and scope, and don't add steps, tools or checks they didn't ask for. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
 
 ## Step 2: Read the user's level
 
@@ -52,7 +52,7 @@ Follow `references/interview-playbook.md`. The core rules:
 - Offer options so answering is fast. If the interface has tappable choices, use them. Otherwise write numbered options the user can answer with "1, 3" (Claude Code is text-only).
 - Ask everything in one round when possible. Only do a second round if an answer opens a real new gap.
 - If cost versus quality is unclear and it affects the model choice, include it as a question.
-- Don't ask whether to plan or draft first. For tasks that can change, delete, send or publish things, build a plan-first or draft-first step into the prompt by default (Claude shows the plan or draft and waits for approval before acting) and list it under Assumptions so the user can remove it.
+- Don't ask whether to plan or draft first. In Improve, Build and Reusable modes (never Handoff), for tasks that can change, delete, send or publish things, build a plan-first or draft-first step into the prompt by default (Claude shows the plan or draft and waits for approval before acting) and list it under Assumptions so the user can remove it.
 - Never guess on irreversible actions (delete, overwrite, send, publish). If the bounds aren't stated, ask. If the user's answer is ambiguous, always re-ask once with concrete numbered options (e.g. 1) move to a folder 2) move to trash 3) permanently delete), even if options were shown before, unless they said "just build it". Only after a second unclear answer, default to the safest option and say so.
 - Ask in the user's language.
 - When the user describes a symptom rather than a prompt, explain the cause first and ask at most 2 questions.
@@ -88,7 +88,22 @@ Use this structure:
 - Model: [model] at [effort] effort — [one-line reason]
 - Cheaper option: [model/effort] — [what you trade off]
 
-**Assumptions** — only if you skipped questions or inferred something important. Always include the default plan-first or draft-first step for agentic tasks, with a note that it can be removed.
+**Assumptions** — only if you skipped questions or inferred something important. In Improve, Build and Reusable modes, always include the default plan-first or draft-first step for agentic tasks, with a note that it can be removed. Never in Handoff mode.
+
+**Already-strong variant** (use this instead of the structure above when the prompt is already strong):
+
+**This prompt is already strong.** [one line on why]
+
+**Small changes:** [one or two lines]
+```
+[the prompt with those changes]
+```
+
+**Run it with**
+- Model: [model] at [effort] effort — [one-line reason]
+- Cheaper option: [model/effort] — [what you trade off]
+
+Add **Assumptions** as above only if needed.
 
 For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems / next step). Keep the handoff concise. Don't add plan-first, draft-first or "read the repo" steps unless the chat itself asked for them. Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
 
