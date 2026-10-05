@@ -1,0 +1,34 @@
+{
+  "name": "odai-prompt-builder",
+  "description": "Prompt Builder by Odai Dahi: turns rough prompts into strong ones and recommends a Claude model and effort level.",
+  "owner": {
+    "name": "Odai Dahi",
+    "url": "https://odaidh.dev"
+  },
+  "plugins": [
+    {
+      "name": "prompt-builder",
+      "source": "./",
+      "description": "Interviews you to turn a rough prompt into a strong one, then recommends which Claude model and effort level to run it with.",
+      "version": "0.2.0",
+      "category": "productivity",
+      "keywords": [
+        "prompt",
+        "prompt engineering",
+        "improve prompt",
+        "claude model",
+        "effort level",
+        "claude.md",
+        "system prompt",
+        "cowork",
+        "claude code"
+      ],
+      "author": {
+        "name": "Odai Dahi",
+        "url": "https://odaidh.dev"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/odai-dh/prompt-builder"
+    }
+  ]
+}
