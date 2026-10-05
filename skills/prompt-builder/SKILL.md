@@ -90,7 +90,7 @@ Use this structure:
 
 **Assumptions** — only if you skipped questions or inferred something important. In Improve, Build and Reusable modes, always include the default plan-first or draft-first step for agentic tasks, with a note that it can be removed. Never in Handoff mode.
 
-For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems / next step). Keep the handoff concise. Don't add plan-first, draft-first or "read the repo" steps unless the chat itself asked for them. Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
+For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems, Next step: state the task, don't prescribe how to start). Keep the handoff concise. Don't add plan-first, draft-first or "read the repo" steps unless the chat itself asked for them. Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
 
 ## Quality check before you answer
 

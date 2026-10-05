@@ -12,6 +12,9 @@
 - Ship when the cases that matter clearly beat the no-skill baseline and known gaps are written down below.
 
 ## Known gaps
+- Eval 2: on complete prompts the skill makes minimal edits but rarely states "already strong" up front.
+- Eval 4: an unrequested approval gate appeared in 1 of 3 runs; watch for it in tester feedback.
+- Untested in the Claude app and Cowork, including tappable options and the app's effort control.
 - How effort is set in the Claude app / Cowork: still unverified. SKILL.md tells the skill not to name a control until this is confirmed; confirm, then update models-and-effort.md and drop that line.
 - Fable 5.1 pricing and default effort: fill from docs.
 - Haiku 5.5 is announced; update models-and-effort.md when it ships.
