@@ -1,0 +1,23 @@
+{
+  "name": "prompt-builder",
+  "version": "0.1.0",
+  "description": "Improve your prompts and write better ones for Claude. Turns a rough prompt into a strong one by asking only the questions that matter, then recommends which Claude model and effort level to use so you save tokens, time and money. Also improves CLAUDE.md files, system prompts and custom instructions, and turns long chats into a clean fresh-start prompt.",
+  "author": { "name": "Odai" },
+  "repository": "https://github.com/odai-dh/prompt-builder",
+  "license": "MIT",
+  "keywords": [
+    "prompt",
+    "prompt engineering",
+    "improve prompt",
+    "better prompts",
+    "prompt builder",
+    "prompt improver",
+    "claude model",
+    "effort level",
+    "claude.md",
+    "system prompt",
+    "save tokens",
+    "cowork",
+    "claude code"
+  ]
+}

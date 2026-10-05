@@ -1,0 +1,45 @@
+{
+  "skill_name": "prompt-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "make this better: write me a blog post about AI",
+      "expected_output": "Asks 2-3 plain-language questions (audience, angle, length), builds a structured prompt, recommends Sonnet at low/medium effort."
+    },
+    {
+      "id": 2,
+      "prompt": "Improve this prompt: 'You are a senior TS dev. Refactor the attached Next.js API routes to use zod validation, keep the response shapes, return a diff.' Skip questions.",
+      "expected_output": "No questions, terse output, states assumptions, minimal changes since the prompt is already strong."
+    },
+    {
+      "id": 3,
+      "prompt": "my CLAUDE.md is 400 lines and claude still ignores half of it, help",
+      "expected_output": "Reusable mode, focuses on trimming and adding reasons, explains per-message cost."
+    },
+    {
+      "id": 4,
+      "prompt": "this chat is huge and getting slow, give me something to paste into a new chat so we can continue",
+      "expected_output": "Handoff mode, uses the handoff template, no interview."
+    },
+    {
+      "id": 5,
+      "prompt": "kan du göra den här prompten bättre: sammanfatta mötet",
+      "expected_output": "Interviews in Swedish, asks what the summary is for and the format, recommends Haiku or Sonnet at low effort."
+    },
+    {
+      "id": 6,
+      "prompt": "which claude model should I use to debug a race condition in my websocket server?",
+      "expected_output": "Model/effort recommendation, frontier or balanced at high effort with a reason, offers to build the debugging prompt."
+    },
+    {
+      "id": 7,
+      "prompt": "improve this for cowork: clean up my downloads folder and update the project notes",
+      "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep and whether to draft first, builds a bounded prompt."
+    },
+    {
+      "id": 8,
+      "prompt": "claude keeps giving me really generic answers when I ask for marketing ideas, why?",
+      "expected_output": "Uses the symptom table: explains missing specifics/audience, asks 1-2 questions, offers a rebuilt prompt."
+    }
+  ]
+}
