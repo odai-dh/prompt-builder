@@ -15,7 +15,8 @@ Goal:
 Decisions made (and why):
 Current state:
 Constraints and preferences:
-Open problems / next step:
+Open problems:
+Next step: [state the task; don't prescribe how to start]
 
 ## Keep sessions cheap
 - One task per session where possible.

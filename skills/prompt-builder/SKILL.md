@@ -32,7 +32,7 @@ If the task lets Claude change, delete, send or publish things (Cowork, Claude C
 
 Everything you can infer, infer. Questions are only for gaps that would change the result.
 
-**Already strong?** If the prompt already has the critical parts for its task type (goal, constraints, output format), or the user says "skip questions", use the "already strong" variant under Output format instead of the full structure. Make only small targeted edits, keep their wording and scope, and don't add steps, tools or checks they didn't ask for. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
+**Already strong?** If the prompt already has the critical parts for its task type (goal, constraints, output format), or the user says "skip questions", say so in one line and make only small targeted edits: change at most 3 things, keep their wording and scope, and keep "What I changed" to one or two lines so they see within seconds that little needed changing. Don't add steps, tools or checks they didn't ask for; adding scope is a rewrite, not an improvement. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
 
 ## Step 2: Read the user's level
 
@@ -89,21 +89,6 @@ Use this structure:
 - Cheaper option: [model/effort] — [what you trade off]
 
 **Assumptions** — only if you skipped questions or inferred something important. In Improve, Build and Reusable modes, always include the default plan-first or draft-first step for agentic tasks, with a note that it can be removed. Never in Handoff mode.
-
-**Already-strong variant** (use this instead of the structure above when the prompt is already strong):
-
-**This prompt is already strong.** [one line on why]
-
-**Small changes:** [one or two lines]
-```
-[the prompt with those changes]
-```
-
-**Run it with**
-- Model: [model] at [effort] effort — [one-line reason]
-- Cheaper option: [model/effort] — [what you trade off]
-
-Add **Assumptions** as above only if needed.
 
 For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems / next step). Keep the handoff concise. Don't add plan-first, draft-first or "read the repo" steps unless the chat itself asked for them. Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
 
