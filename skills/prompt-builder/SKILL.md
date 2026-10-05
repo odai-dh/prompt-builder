@@ -52,6 +52,7 @@ Follow `references/interview-playbook.md`. The core rules:
 - Offer options so answering is fast. If the interface has tappable choices, use them. Otherwise write numbered options the user can answer with "1, 3" (Claude Code is text-only).
 - Ask everything in one round when possible. Only do a second round if an answer opens a real new gap.
 - If cost versus quality is unclear and it affects the model choice, include it as a question.
+- Don't ask whether to plan or draft first. For tasks that can change, delete, send or publish things, build a plan-first or draft-first step into the prompt by default (Claude shows the plan or draft and waits for approval before acting) and list it under Assumptions so the user can remove it.
 - Never guess on irreversible actions (delete, overwrite, send, publish). If the bounds aren't stated, ask. If the user's answer is still ambiguous, ask again with concrete numbered options (e.g. 1) move to a folder 2) move to trash 3) permanently delete). If they don't answer clearly, default to the safest option and say so.
 - Ask in the user's language.
 - When the user describes a symptom rather than a prompt, explain the cause first and ask at most 2 questions.
@@ -87,7 +88,7 @@ Use this structure:
 - Model: [model] at [effort] effort — [one-line reason]
 - Cheaper option: [model/effort] — [what you trade off]
 
-**Assumptions** — only if you skipped questions or inferred something important.
+**Assumptions** — only if you skipped questions or inferred something important. Always include the default plan-first or draft-first step for agentic tasks, with a note that it can be removed.
 
 For Handoff mode, use the template in `references/long-sessions-and-handoff.md` instead (fallback if unreadable: Goal, Decisions made and why, Current state, Constraints and preferences, Open problems / next step). Fill fields only from what is in the conversation; never from the environment or guesses. Leave a bracketed blank instead.
 

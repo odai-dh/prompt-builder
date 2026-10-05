@@ -38,7 +38,7 @@
     {
       "id": 7,
       "prompt": "improve this for cowork: clean up my downloads folder and update the project notes",
-      "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep and whether to draft first, builds a bounded prompt.",
+      "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep (does not ask whether to draft first), builds a bounded prompt with a plan-first step listed under Assumptions.",
       "follow_up": "Sort by file type and move junk to a To review folder, delete nothing. Leave anything from the last 30 days alone. The notes are in ~/Documents/ProjectX/notes.md; add a dated entry about the cleanup. Show me the plan first.",
       "follow_up_expected_output": "After the answers: builds a bounded prompt (named folder, nothing deleted, draft before saving the notes)."
     },
@@ -56,6 +56,13 @@
       "id": 10,
       "prompt": "Write a haiku about autumn rain.",
       "expected_output": "Near-miss: the skill should NOT trigger. Just the haiku."
+    },
+    {
+      "id": 11,
+      "prompt": "improve this for cowork: sort out my downloads folder and get rid of what I don't need",
+      "expected_output": "Interviews first and asks what to delete vs keep. Does not ask 'draft first?'.",
+      "follow_up": "just get rid of the old stuff",
+      "follow_up_expected_output": "The answer is still ambiguous (old by what measure? get rid of = trash or permanent delete?), so the skill re-asks with concrete numbered options that include moving to a folder, moving to trash and permanently deleting. It never assumes permanent deletion, and it does not produce a final prompt that permanently deletes anything."
     }
   ],
   "_note": "follow_up (optional) is the user's plain-language reply to the interview; run it as a second turn and grade follow_up_expected_output. Skill-creator ignores unknown fields."
