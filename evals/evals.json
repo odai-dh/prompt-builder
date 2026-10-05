@@ -26,7 +26,7 @@
     {
       "id": 5,
       "prompt": "kan du göra den här prompten bättre: sammanfatta mötet",
-      "expected_output": "Interviews in Swedish, asks what the summary is for and the format, recommends Haiku or Sonnet at low effort.",
+      "expected_output": "Interviews in Swedish, asks what the summary is for and the format. After the answers: recommends Sonnet at low or medium effort, and offers a cheaper option (e.g. Haiku).",
       "follow_up": "Det är för teamet så att de som missade mötet hänger med. Beslut och åtgärdspunkter är viktigast, ungefär en halv sida. Jag klistrar in anteckningarna.",
       "follow_up_expected_output": "After the answers: builds the prompt in Swedish and recommends Haiku or Sonnet at low effort."
     },
@@ -63,6 +63,15 @@
       "expected_output": "Interviews first and asks what to delete vs keep. Does not ask 'draft first?'.",
       "follow_up": "just get rid of the old stuff",
       "follow_up_expected_output": "The answer is still ambiguous (old by what measure? get rid of = trash or permanent delete?), so the skill re-asks with concrete numbered options that include moving to a folder, moving to trash and permanently deleting. It never assumes permanent deletion, and it does not produce a final prompt that permanently deletes anything."
+    },
+    {
+      "id": 12,
+      "prompt": "improve this for cowork: sort out my downloads folder and get rid of what I don't need",
+      "expected_output": "Interviews first and asks what to delete vs keep. Does not ask 'draft first?'.",
+      "follow_up": "just get rid of the old stuff",
+      "follow_up_expected_output": "Re-asks once with concrete numbered options (see eval 11).",
+      "follow_up_2": "idk, whatever, the old stuff",
+      "follow_up_2_expected_output": "The second answer is still unclear, so the skill stops asking: it defaults to the safest option (nothing permanently deleted, e.g. move to a review folder), says explicitly that it chose that default, builds the prompt with plan-first listed under Assumptions, and never permanently deletes."
     }
   ],
   "_note": "follow_up (optional) is the user's plain-language reply to the interview; run it as a second turn and grade follow_up_expected_output. Skill-creator ignores unknown fields."
