@@ -5,7 +5,7 @@
       "id": 1,
       "prompt": "make this better: write me a blog post about AI",
       "expected_output": "Asks 2-3 plain-language questions (audience, angle, length), builds a structured prompt, recommends Sonnet at low/medium effort.",
-      "follow_up": "2, 2, b, a",
+      "follow_up": "It's for small-business owners who are curious about AI but not technical. Practical angle, about 1,000 words, friendly tone.",
       "follow_up_expected_output": "After the answers: builds a structured prompt and recommends Sonnet at low/medium effort."
     },
     {
@@ -27,7 +27,7 @@
       "id": 5,
       "prompt": "kan du göra den här prompten bättre: sammanfatta mötet",
       "expected_output": "Interviews in Swedish, asks what the summary is for and the format, recommends Haiku or Sonnet at low effort.",
-      "follow_up": "1a, 2b, 3a",
+      "follow_up": "Det är för teamet så att de som missade mötet hänger med. Beslut och åtgärdspunkter är viktigast, ungefär en halv sida. Jag klistrar in anteckningarna.",
       "follow_up_expected_output": "After the answers: builds the prompt in Swedish and recommends Haiku or Sonnet at low effort."
     },
     {
@@ -39,7 +39,7 @@
       "id": 7,
       "prompt": "improve this for cowork: clean up my downloads folder and update the project notes",
       "expected_output": "Flags 'clean up' and 'update' as ambiguous destructive verbs, asks what to delete vs keep and whether to draft first, builds a bounded prompt.",
-      "follow_up": "3, 1, 1, 1",
+      "follow_up": "Sort by file type and move junk to a To review folder, delete nothing. Leave anything from the last 30 days alone. The notes are in ~/Documents/ProjectX/notes.md; add a dated entry about the cleanup. Show me the plan first.",
       "follow_up_expected_output": "After the answers: builds a bounded prompt (named folder, nothing deleted, draft before saving the notes)."
     },
     {
@@ -58,5 +58,5 @@
       "expected_output": "Near-miss: the skill should NOT trigger. Just the haiku."
     }
   ],
-  "_note": "follow_up (optional) is the user's reply to the interview; run it as a second turn and grade follow_up_expected_output. Skill-creator ignores unknown fields."
+  "_note": "follow_up (optional) is the user's plain-language reply to the interview; run it as a second turn and grade follow_up_expected_output. Skill-creator ignores unknown fields."
 }
