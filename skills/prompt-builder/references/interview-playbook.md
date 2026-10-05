@@ -6,7 +6,7 @@
 Ask first about the gap whose answer would change the prompt most. Rough order: goal → audience → bounds/side effects (agentic) → constraints → format → examples.
 
 ## Always ask (if not stated)
-- **Agentic tasks with irreversible actions** (delete, overwrite, send, publish): what exactly to act on, what to keep, and whether to draft first. Never infer this one.
+- **Agentic tasks with irreversible actions** (delete, overwrite, send, publish): what exactly to act on, what to keep, and whether to draft first. Never infer this one. If the answer is ambiguous, re-ask with concrete numbered options; if still unclear, default to the safest option and say so.
 
 ## Usually infer, don't ask
 - Format, when the task type makes it obvious.

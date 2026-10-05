@@ -18,7 +18,7 @@ Last updated: 2026-10-05  <!-- update whenever the table changes; check platform
 | Fast | Claude Haiku 4.5 | 200K | $1 / $5 | Manual extended thinking | No effort setting |
 | Balanced | Claude Sonnet 5.5 | 1M | $2 / $10 | Adaptive | high |
 | Frontier | Claude Opus 5.5 | 1M | $4 / $20 | Adaptive, always on | medium |
-| Top | Claude Fable 5.1 | 1M | see docs | Adaptive | see docs |
+| Top | Claude Fable 5.1 | 1M | $10 / $50 | Adaptive | verify |
 
 Note: Haiku 5.5 has been announced but not released as of this date. When it ships, update the Fast row.
 

@@ -52,7 +52,7 @@ Follow `references/interview-playbook.md`. The core rules:
 - Offer options so answering is fast. If the interface has tappable choices, use them. Otherwise write numbered options the user can answer with "1, 3" (Claude Code is text-only).
 - Ask everything in one round when possible. Only do a second round if an answer opens a real new gap.
 - If cost versus quality is unclear and it affects the model choice, include it as a question.
-- Never guess on irreversible actions. If an agentic task could delete, overwrite or send something and the bounds aren't stated, ask.
+- Never guess on irreversible actions (delete, overwrite, send, publish). If the bounds aren't stated, ask. If the user's answer is still ambiguous, ask again with concrete numbered options (e.g. 1) move to a folder 2) move to trash 3) permanently delete). If they don't answer clearly, default to the safest option and say so.
 - Ask in the user's language.
 - When the user describes a symptom rather than a prompt, explain the cause first and ask at most 2 questions.
 
