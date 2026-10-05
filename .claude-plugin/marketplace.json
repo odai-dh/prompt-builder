@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "prompt-builder",
-      "source": "./",
+      "source": "./plugins/prompt-builder",
       "description": "Interviews you to turn a rough prompt into a strong one, then recommends which Claude model and effort level to run it with.",
       "version": "0.2.0",
       "category": "productivity",

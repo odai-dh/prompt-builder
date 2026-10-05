@@ -13,7 +13,7 @@ Inside a Claude Code session, use `/plugin marketplace add odai-dh/prompt-builde
 
 To pick up fixes during the test: `claude plugin update prompt-builder@odai-prompt-builder`.
 
-Developers can instead load a local checkout for one session: `git clone --branch main https://github.com/odai-dh/prompt-builder.git`, then `claude --plugin-dir ./prompt-builder`.
+Developers can instead load a local checkout for one session: `git clone --branch main https://github.com/odai-dh/prompt-builder.git`, then `claude --plugin-dir ./prompt-builder/plugins/prompt-builder`.
 
 ## What to do
 

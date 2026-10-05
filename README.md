@@ -31,7 +31,7 @@ To load the plugin from a local checkout instead (this session only, no install)
 
 ```
 git clone --branch main https://github.com/odai-dh/prompt-builder.git
-claude --plugin-dir ./prompt-builder
+claude --plugin-dir ./prompt-builder/plugins/prompt-builder
 ```
 
 See [TESTERS.md](TESTERS.md) if you're helping test.

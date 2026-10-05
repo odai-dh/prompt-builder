@@ -1,8 +1,13 @@
 # Development
 
+## Repo layout
+Only `plugins/prompt-builder/` is installed on users' machines (the marketplace entry points at it). Everything else here (`sources/`, `evals/`, this file, `TESTERS.md`) stays in the repo and is not installed. Keep dev material outside that folder.
+
+The plugin's own `LICENSE` copy in `plugins/prompt-builder/` must match the root `LICENSE`.
+
 ## Adding knowledge
 1. Put raw notes in `sources/` (own words + link + topic tags).
-2. Distill into `skills/prompt-builder/references/`. Only keep guidance that changes what the agent does.
+2. Distill into `plugins/prompt-builder/skills/prompt-builder/references/`. Only keep guidance that changes what the agent does.
 3. Add or update an eval if the new knowledge should change behavior.
 
 ## Testing (evals)
