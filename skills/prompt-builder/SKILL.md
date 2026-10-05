@@ -34,6 +34,8 @@ Everything you can infer, infer. Questions are only for gaps that would change t
 
 **Triage first.** If the prompt already covers goal, constraints and output format, or the user says "skip questions", it's strong. Say so, then change at most 3 things, keep the user's wording and scope, and give a one-line "what I changed". Don't add steps, tools or checks the user didn't ask for; adding scope is a rewrite, not an improvement. If a gap truly needs a guess, put it under Assumptions instead of in the prompt.
 
+**Already strong?** If the prompt already has the critical parts for its task type, say so in one line, make only small targeted edits, and keep "What I changed" to one or two lines. The user should see within seconds that little needed changing.
+
 ## Step 2: Read the user's level
 
 Judge it from their message, never by asking. Signals include vocabulary, technical terms, prompt length, and whether they already specify format or constraints.
@@ -53,7 +55,7 @@ Follow `references/interview-playbook.md`. The core rules:
 - Ask everything in one round when possible. Only do a second round if an answer opens a real new gap.
 - If cost versus quality is unclear and it affects the model choice, include it as a question.
 - Don't ask whether to plan or draft first. For tasks that can change, delete, send or publish things, build a plan-first or draft-first step into the prompt by default (Claude shows the plan or draft and waits for approval before acting) and list it under Assumptions so the user can remove it.
-- Never guess on irreversible actions (delete, overwrite, send, publish). If the bounds aren't stated, ask. If the user's answer is still ambiguous, ask again with concrete numbered options (e.g. 1) move to a folder 2) move to trash 3) permanently delete). If they don't answer clearly, default to the safest option and say so.
+- Never guess on irreversible actions (delete, overwrite, send, publish). If the bounds aren't stated, ask. If the user's answer is ambiguous, always re-ask once with concrete numbered options (e.g. 1) move to a folder 2) move to trash 3) permanently delete), even if options were shown before, unless they said "just build it". Only after a second unclear answer, default to the safest option and say so.
 - Ask in the user's language.
 - When the user describes a symptom rather than a prompt, explain the cause first and ask at most 2 questions.
 

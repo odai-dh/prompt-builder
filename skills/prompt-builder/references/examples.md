@@ -38,14 +38,16 @@ Write a 1,000-word blog post for business owners on practical ways to use AI at 
 
 **Rough prompt:** "clean up my downloads folder and update the project notes"
 
-**Questions asked:** what "clean up" means (plan only / sort / sort + move junk to a review folder / delete), what to leave alone, what "update" means, draft first or edit directly.
+**Questions asked:** what "clean up" means (plan only / sort / sort + move junk to a review folder / delete), what to leave alone, what "update" means. Draft-first is not asked; it is built in by default.
 
-**Final prompt (after answers 3, 1, 1, 1):**
+**Final prompt (after answers: sort and move junk to a review folder; leave the last 30 days alone; log what was cleaned up):**
 ```
-In ~/Downloads, sort files into subfolders by type. Move duplicates and installers to a folder called "To review"; do not delete anything. Leave files changed in the last 30 days where they are. Then draft a dated entry for the project notes describing what you did and show it to me before saving. Stop when the folder is sorted and the draft is shown.
+In ~/Downloads, sort files into subfolders by type. Move duplicates and installers to a folder called "To review"; do not delete anything. Leave files changed in the last 30 days where they are. First show me a plan listing what you will move and wait for my OK. Then draft a dated entry for the project notes describing what you did and show it to me before saving. Stop when the folder is sorted and the draft is shown.
 ```
 
 **Run it with:** Sonnet 5.5, low effort. Bounds matter more than reasoning here.
+
+**Assumptions:** the plan-first and draft-first steps are on by default because the task moves files and edits notes; remove them if you trust the result. The "To review" folder is inside Downloads. "Last 30 days" is by modified date.
 
 ## 4. Symptom, not a prompt
 

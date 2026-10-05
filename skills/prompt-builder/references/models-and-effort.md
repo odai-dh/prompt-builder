@@ -30,7 +30,7 @@ Effort sets how much verification, edge-case testing and independent judgement C
 
 | Effort | Use for |
 |---|---|
-| low | Quick, in-the-loop work: brainstorming, sketches, easy edits, first drafts to iterate on |
+| low | Quick, in-the-loop work: brainstorming, sketches, easy edits, first drafts to iterate on, summaries, translations, formatting |
 | medium | Regular work, e.g. building a feature from a clear spec |
 | high | Anything where verification matters: bug fixes in existing code, edge-case-heavy logic, reviews |
 | xhigh | Hard problems with many hidden edge cases (security, parsers, performance) |

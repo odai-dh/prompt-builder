@@ -6,7 +6,7 @@
 Ask first about the gap whose answer would change the prompt most. Rough order: goal → audience → bounds/side effects (agentic) → constraints → format → examples.
 
 ## Always ask (if not stated)
-- **Agentic tasks with irreversible actions** (delete, overwrite, send, publish): what exactly to act on and what to keep. Never infer this one. Don't ask about draft-first: add a plan-first or draft-first step to the built prompt by default and list it under Assumptions so the user can remove it. If the answer is ambiguous, re-ask with concrete numbered options; if still unclear, default to the safest option and say so.
+- **Agentic tasks with irreversible actions** (delete, overwrite, send, publish): what exactly to act on and what to keep. Never infer this one. Don't ask about draft-first: add a plan-first or draft-first step to the built prompt by default and list it under Assumptions so the user can remove it. If the answer is ambiguous, always re-ask once with concrete numbered options, even if options were shown before (unless they said "just build it"); only after a second unclear answer, default to the safest option and say so.
 
 ## Usually infer, don't ask
 - Format, when the task type makes it obvious.
